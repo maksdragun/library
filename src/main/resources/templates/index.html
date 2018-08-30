@@ -1,0 +1,44 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Library</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Author</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Year</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book : ${bookList}">
+        <td th:text="${book.author}"></td>
+        <td th:text="${book.title}"></td>
+        <td th:text="${book.description}"></td>
+        <td th:text="${book.year}"></td>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<hr>
+<h2>Add book to the library</h2>
+
+    <form action="/addBook" method="POST">
+        Author <input type="text" id="author" name="author"/><br/>
+        Title <input type="text" id="title" name="title"/><br/>
+        Description <textarea rows="4" cols="50" id="description" name="description"></textarea><br/>
+        Year <input type="text" id="year" name="year"/><br/>
+        <input type="submit"/>
+    </form>
+
+<hr>
+
+</body>
+</html>
