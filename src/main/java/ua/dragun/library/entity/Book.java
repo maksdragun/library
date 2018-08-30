@@ -8,12 +8,12 @@ public class Book {
     private String author;
     private String title;
     private String description;
-    private String year;
+    private Integer year;
 
     public Book() {
     }
 
-    public Book(String id, String author, String title, String description, String year) {
+    public Book(String id, String author, String title, String description, Integer year) {
         this.id = id;
         this.author = author;
         this.title = title;
@@ -53,11 +53,11 @@ public class Book {
         this.description = description;
     }
 
-    public String getYear() {
+    public Integer getYear() {
         return year;
     }
 
-    public void setYear(String year) {
+    public void setYear(Integer year) {
         this.year = year;
     }
 }
