@@ -39,6 +39,13 @@
     </form>
 
 <hr>
+<h2>Search</h2>
 
+    <form action="/search" method="GET">
+        <input type="text" name="search" id="search" th:value="${search}"/>
+        <input type="submit" value="Search"/>
+    </form>
+
+<hr>
 </body>
 </html>
